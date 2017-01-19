@@ -13,7 +13,7 @@ def shuffle(data):
     """randomly shuffles element in the input data"""
     n = len(data)
     for token in range(n - 1):
-        swap(data, token, random.randrange(token, n))
+        swap(data, token, random.randrange(token, n)) 
 
 alist1 = [1, 3, 5, 6]
 print(alist1)
