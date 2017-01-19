@@ -1,5 +1,4 @@
-# algorithm for shuffling given subscriptable data structure
-# from Knuth
+# algorithm for shuffling given subscriptable data structure (Knuth)
 
 import random
 
