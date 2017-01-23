@@ -1,4 +1,4 @@
-# Maximum matching, description here: 
+# Maximum matching, description here: https://lion137.blogspot.co.uk/2017/01/text-segmentation-maximum-matching-in.html
 
 def max_match(sentence, dictionary):
     if not sentence:
