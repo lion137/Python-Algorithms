@@ -1,4 +1,5 @@
 # pollard's rho algorithm to factorization https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm
+# https://lion137.blogspot.co.uk/2017/02/python-pollards-rho-algorithm.html
 
 
 from random import randint
