@@ -15,6 +15,7 @@ def bin_pow_set(n):
         return '0' * (n - len(x)) + x
     i = 0
     k = 0
+    yield '0' * n
     while k < 2 ** n - 1:
         k += 1
         i = append_zeroes(k, n)
@@ -37,6 +38,7 @@ def any_pow_set(n, m):
         return '0' * (n - len(x)) + x
     i = 0
     k = 0
+    yield "0" * n
     while k < m ** n - 1:
         k += 1
         i = append_zeroes(k, n, m)
@@ -82,7 +84,12 @@ def gray_iter(n):
     return xs
 
 
-
+if __name__ == '__main__':
+    it_bin = bin_pow_set(3)
+    print(list(it_bin)) # -> ['001', '010', '011', '100', '101', '110', '111']
+    it_any = any_pow_set(3, 3)
+    print(list(it_any)) # -> ['001', '002', '010', '011', '012', ... , '220', '221', '222']
+    print(gray_iter(3))
 
 
 
