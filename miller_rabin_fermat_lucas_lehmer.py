@@ -53,29 +53,28 @@ def fermat_extended(n, cnt):
 
 # 2. Miler - Rabin
 
-# procedure nontrivial_root, which looking for a non trivial square root of one mod n
-
-def nontrivial_root(a, n):
-    """checking Fermat Theorem, and non trivial square root"""
-
-    # find t and u, such that u odd, t >= 1 and n - 1 = 2^tu:
-    t, u = 0, n - 1
-    while u % 2 == 0:
-        t += 1
-        u //= 2
-
-    x0 = modularexponenation(a, u, n)
-    for i in range(1, t + 1):
-        x1 = x0 ** 2 % n
-        if x1 == 1 and x0 != 1 and x0 != n - 1:
-            return True
-    if x1 != 1:
-        return True
-    return False
-
 
 def miller_rabin(n, s):
     """Miler Rabin Test"""
+
+    # procedure nontrivial_root, which looking for a non trivial square root of one mod n
+    def nontrivial_root(a, n):
+        """checking Fermat Theorem, and non trivial square root"""
+
+        # find t and u, such that u odd, t >= 1 and n - 1 = 2^tu:
+        t, u = 0, n - 1
+        while u % 2 == 0:
+            t += 1
+            u //= 2
+
+        x0 = modularexponenation(a, u, n)
+        for i in range(1, t + 1):
+            x1 = x0 ** 2 % n
+            if x1 == 1 and x0 != 1 and x0 != n - 1:
+                return True
+        if x1 != 1:
+            return True
+        return False
 
     # Return True if n = 2
     if n == 2:
