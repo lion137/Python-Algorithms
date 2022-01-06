@@ -1,4 +1,3 @@
-# inverted index algorithm more here:
 from porpositional_logic_eval import *
 
 
